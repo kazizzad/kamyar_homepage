@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Kamyar Azizzadenesheli's Publications</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="site.css">
+</head> 
+<body>
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+	<a class="navbar-brand" href="index.html">Kamyar Azizzadenesheli</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+	<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+		<div class="navbar-nav">
+		<a class="nav-item nav-link" href="publications.html">Publications</a>
+		<a class="nav-item nav-link" href="teaching.html">Teaching</a>
+	        <a class="nav-item nav-link" href="news.html">News</a>
+			<!--  <a class="nav-item nav-link" href="index.html#bio">Bio</a>
+					          <a class="nav-item nav-link" href="software.html">Software</a>
+					          <a class="nav-item nav-link" href="talks.html">Technical Talks</a>
+					          <a class="nav-item nav-link" href="media.html">Media</a>
+					  <a class="nav-item nav-link" href="teaching.html">Teaching</a>
+					          <a class="nav-item nav-link" href="index.html#contact">Contact</a>
+					          <a class="nav-item nav-link" href="group.html">Group</a>
+					          <a class="nav-item nav-link" href="usefullinks.html">Useful Links</a>
+					        </div>
+				      </div>
+			-->
+		</div>
+	</div>
+	</nav>
+	<div class="container">
+	<div class="row">
+	<div class="col-lg-12">
+	<h2 class="my-3">All Publications</h2>
+	<p><input type="text" id="search" placeholder="Type to search" autocomplete="on" autofocus class="form-control"></p>
+	<ul id="myPublications" class='list-group'>
+<!--	<font size="+3"><li class="list-group-item">2019</li></font>
+-->
+	<script>
+		function paper(context) {
+			var newElem = document.createElement("li");
+			newElem.className = "list-group-item"
+			newElem.innerHTML = '<b>"<strong>'+context.title+'</strong>"</b><br>&nbsp&nbsp'+context.authors+'<br>'
+			if (context.conf){newElem.innerHTML = '<div>' + newElem.innerHTML + '<em>&nbsp&nbsp&nbsp&nbsp'+context.conf+'</em></div>'}
+			else{newElem.innerHTML = '<div>' + newElem.innerHTML + '</div>'}
+			slack_var = '<span class="smallText">Download:</span> &nbsp;<a target="_blank" href='+context.paper+'><img src="images/img_pdf.png" alt="" width="30" height="30"></a>'
+			if (context.code){slack_var = slack_var + '&nbsp;&nbsp;<a href='+context.code+' style="text-decoration:none">[Code]</a>'}
+			if (context.package){slack_var = slack_var + '&nbsp;&nbsp;<a href='+context.package+' style="text-decoration:none">[Package]</a>'}
+			if (context.ipython){slack_var = slack_var + '&nbsp;&nbsp;<a href='+context.ipython+' style="text-decoration:none">[Ipython]</a>'}
+			if (context.poster){slack_var = slack_var + '&nbsp;&nbsp;<a href='+context.poster+' style="text-decoration:none">[Poster]</a>'}
+			if (context.slides){slack_var = slack_var + '&nbsp;&nbsp;<a href='+context.slides+' style="text-decoration:none">[Slides]</a>'}
+			if (context.talk){slack_var = slack_var + '&nbsp;&nbsp;<a href='+context.talk+' style="text-decoration:none">[Talk]</a>'}
+			if (context.blog){slack_var = slack_var + '&nbsp;&nbsp;<a href='+context.blog+' style="text-decoration:none">[Blog Post]</a>'}
+			if (context.page){slack_var = slack_var + '&nbsp;&nbsp;<a href='+context.page+' style="text-decoration:none">[Project Page]</a>'}
+			if (context.demo){slack_var = slack_var + '&nbsp;&nbsp;<a href='+context.demo+' style="text-decoration:none">[Demo]</a>'}
+			if (context.supp){slack_var = slack_var + '&nbsp;&nbsp;<a href='+context.supp+' style="text-decoration:none">[Supp]</a>'}
+              newElem.innerHTML = newElem.innerHTML + '<div class = "download">' + slack_var + '</div>'  
+              var container = document.getElementById("myPublications");container.appendChild(newElem);}
+
+//             context = {title,authors,conf,paper,code,poster,slides,talk,blog,page,demo} 
+
+	context = {title:"Policy Gradient in Partially Observable Environments: Approximation and Convergence",
+                               authors:"Kamyar Azizzadenesheli, Yisong Yue, Animashree Anandkumar, 2020",
+                               paper:"https://arxiv.org/pdf/1810.07900.pdf"}
+            paper(context)
+
+
+
+
+
+        context = {title:"MeshfreeFlowNet: A Physics-Constrained Deep Continuous Space-Time Super-Resolution Framework",
+                        authors:"Chiyu (Max) Jiang, Soheil Esmaeilzadeh, Kamyar Azizzadenesheli, Karthik Kashinath, Mustafa Mustafa, Hamdi A. Tchelepi, Philip Marcus, Prabhat, Anima Anandkumar, 2020",
+                        paper:"https://arxiv.org/pdf/2005.01463.pdf",
+			page:"http://www.maxjiang.ml/proj/meshfreeflownet",
+			talk:"https://youtu.be/mjqwPch9gDo",
+			package:"https://github.com/maxjiang93/space_time_pde"}
+            paper(context)
+
+
+
+        context = {title:"EikoNet: Solving the Eikonal equation with Deep Neural Networks",
+                        authors:"Jonathan D. Smith, Kamyar Azizzadenesheli, Zachary E. Ross, 2020",
+                        paper:"https://arxiv.org/abs/2004.00361"}
+            paper(context)
+
+        context = {title:"Logarithmic Regret Bound in Partially Observable Linear Dynamical Systems",
+                        authors:"Sahin Lale, Kamyar Azizzadenesheli, Babak Hassibi, Anima Anandkumar, 2020",
+                        paper:"https://arxiv.org/pdf/2003.11227.pdf"}
+            paper(context)
+
+        context = {title:"Regret Bound of Adaptive Control in Linear Quadratic Gaussian (LQG) Systems",
+                        authors:"Sahin Lale, Kamyar Azizzadenesheli, Babak Hassibi, Anima Anandkumar, 2020",
+                        paper:"https://arxiv.org/pdf/2003.05999.pdf"}
+            paper(context)
+
+        context = {title:"Neural Operator: Graph Kernel Network for Partial Differential Equations",
+                        authors:"Zongyi Li, Nikola Kovachki, Kamyar Azizzadenesheli, Burigede Liu, Kaushik Bhattacharya, Andrew Stuart, Anima Anandkumar",
+                        paper:"https://arxiv.org/pdf/2003.03485.pdf",
+			conf:"Appeared at International Conference on Learning Representations (ICLR) 2020 Workshop."}
+            paper(context)
+
+        context = {title:"Regret Minimization in Partially Observable Linear Quadratic Control",
+                        authors:"Sahin Lale, Kamyar Azizzadenesheli, Babak Hassibi, Anima Anandkumar",
+                        paper:"https://arxiv.org/pdf/2002.00082.pdf",
+			conf:"Appeared at Neural Information Processing Systems (NeurIPS) 2019 Workshop."}
+            paper(context)
+
+        context = {title:"Directivity Modes of Earthquake Populations with Unsupervised Learning",
+	                authors:"Zachary E. Ross, Daniel T. Trugman, Kamyar Azizzadenesheli, Anima Anandkumar",
+	                paper:"https://arxiv.org/abs/1907.00496",
+			conf :"Appeared at the Journal of Geophysical Research, 2020"}
+            paper(context)
+
+        context = {title:"Maybe a few considerations in Reinforcement Learning Research?",
+	                        authors:"Kamyar Azizzadenesheli, 2019",
+	                        paper:"https://openreview.net/pdf?id=B1ghkEdzo4"}
+            paper(context)
+
+	context = {title:"Learning Causal State Representations of Partially Observable Environments",
+	                        authors:"Amy Zhang, Zachary C Lipton, Luis Pineda, Kamyar Azizzadenesheli, Anima Anandkumar, Laurent Itti, Joelle Pineau, Tommaso Furlanello",
+	                        conf: "Appeared at the Multi-disciplinary Conference on Reinforcement Learning and Decision Making(RLDM) 2019",
+	                        paper:"https://arxiv.org/pdf/1906.10437.pdf"}
+            paper(context)
+
+           context = {title:"Reinforcement Learning in Structured and Partially Observable Environments",
+	                                         authors:"Kamyar Azizzadenesheli",
+	                                          conf: "Ph.D. Thesis, 2019",
+	                                          paper: "https://escholarship.org/uc/item/4sx3s1ph"}
+            paper(context)
+
+context = {title:"Stochastic Linear Bandits with Hidden Low Rank Structure",
+	                authors:"Sahin Lale, Kamyar Azizzadenesheli, Anima Anandkumar, Babak Hassibi",
+			conf: "Appeared at Neural Information Processing Systems (NeurIPS) 2019 Workshop",
+	                paper:"https://arxiv.org/abs/1901.09490"}
+            paper(context)
+
+            context = {title:"Regularized Learning for Domain Adaptation under Label Shifts",
+	                authors:"Kamyar Azizzadenesheli, Anqi Liu, Fanny Yang, Animashree Anandkumar",
+	                paper:"https://arxiv.org/abs/1903.09734",
+	                conf: "Appeared at International Conference on Learning Representations (ICLR) 2019",
+	                code:"https://github.com/Angela0428/labelshift"}
+            paper(context)
+
+            context = {title:"Neural Lander: Stable Drone Landing Control using Learned Dynamics",
+	               authors:"Guanya Shi, Xichen Shi, Michael O'Connell, Rose Yu, Kamyar Azizzadenesheli, Animashree Anandkumar, Yisong Yue, Soon-Jo Chung",
+	               paper:"https://arxiv.org/abs/1811.08027",
+	    conf: "Appeared at International Conference on Robotics and Automation (ICRA) 2019",
+	    poster:"posters/Poster_NeuralLander.pdf",
+	    demo:"https://www.youtube.com/watch?v=C_K8MkC_SSQ"}
+            paper(context)
+
+            context = {title:"signSGD with Majority Vote is Communication Efficient And Fault Tolerant",
+	                       authors:"Jeremy Bernstein, Jiawei Zhao, Kamyar Azizzadenesheli, Anima Anandkumar",
+	                       paper:"https://arxiv.org/abs/1810.05291",
+	      conf: "Appeared at International Conference on Learning Representations (ICLR) 2019",
+	      code:"https://github.com/PermiJW/signSGD-with-Majority-Vote",
+	           slides:"slides/signSGD.pptx"}
+            paper(context)
+
+            context = {title:"Surprising Negative Results for Generative Adversarial Tree Search",
+	                       authors:"Kamyar Azizzadenesheli, Brandon Yang, Weitang Liu, Zachary C. Lipton, Animashree Anandkumar",
+	                       paper:"https://arxiv.org/abs/1806.05780",
+	      conf: "Appeared at Neural Information Processing Systems (NeurIPS) 2018 Workshop",
+	      code:"https://github.com/kazizzad/GATS",
+	      poster:"slides/Slides_GATS-NIPS-2018.pdf",
+	      package:"https://github.com/bclyang/updated-atari-env"}
+            paper(context)    
+
+    	context = {title:"signSGD: Compressed Optimisation for Non-Convex Problems",
+	                       authors:"Jeremy Bernstein, Yu-Xiang Wang, Kamyar Azizzadenesheli, Anima Anandkumar",
+	                       paper:"https://arxiv.org/abs/1802.04434",
+	      conf:"Appeared at ICML 2018, Stockholm, Sweden",
+	      poster:"https://jeremybernste.in/publications/signum/poster.pdf",
+	      slides:"https://jeremybernste.in/publications/signum/slides.pdf"}
+            paper(context)
+  
+            context = {title:"Compression by the signs: distributed learning is a two-way street",
+	                           authors:"Jeremy Bernstein, Yu-Xiang Wang, Kamyar Azizzadenesheli, Anima Anandkumar",
+	                       conf: "Appeared at ICLR 2018, Vancouver, Canada, Workshop",
+	                       paper:"https://openreview.net/pdf?id=SJn0cw1PM"}
+            paper(context)
+            
+            context = {title:"Stochastic activation pruning for robust adversarial defense",
+	                                   authors:"Guneet S. Dhillon, Kamyar Azizzadenesheli, Zachary C. Lipton, Jeremy Bernstein, Jean Kossaifi, Aran Khanna, Anima Anandkumar",
+	                               conf: "Appeared at ICLR 2018, Vancouver, Canada",
+	                               paper:"https://openreview.net/pdf?id=H1uR4GZRZ",
+	                               code:"https://github.com/Guneet-Dhillon/Stochastic-Activation-Pruning",
+	              poster:"posters/poster_sap-iclr-2018.pdf"}
+            paper(context)
+
+            context = {title:"Efficient Exploration through Bayesian Deep Q-Networks",
+	                                          authors:"Kamyar Azizzadenesheli, Anima Anandkumar",
+	                                       conf: "Appeared at Neural Information Processing Systems (NeuriPS) 2017 Workshop ",
+	                                       paper:"https://arxiv.org/abs/1802.04412",
+	                                       code:"https://github.com/kazizzad/BDQN-MxNet-Gluon",
+						talk:"https://www.youtube.com/watch?v=BH9oGt4GTUc&t=3s"}
+            paper(context)
+ 
+            context = {title:"Reinforcement Learning in Rich-Observation MDPs using Spectral Methods",
+	                       authors:"Kamyar Azizzadenesheli, Alessandro Lazaric, Animashree Anandkumar",
+	                       conf: "Appeared at RLDM 2017, Ann Arbor, Michigan, USA",
+	                       paper:"https://arxiv.org/abs/1611.03907",
+				poster:"posters/poster_ROMDP2017RLDM.pdf"}
+            paper(context)
+
+            context = {title:"Combating Reinforcement Learning's Sisyphean Curse with Intrinsic Fear",
+	                 authors:"Zachary C. Lipton, Kamyar Azizzadenesheli, Abhishek Kumar, Lihong Li, Jianfeng Gao, Li Deng",
+	                 conf: "Appeared at Neural Information Processing Systems (NeuriPS) 2016 Workshop ",
+	                 paper:"pubs/paper_SafeRL_2016.pdf",
+	demo:"https://www.youtube.com/channel/UCx7ELj0E6EwFopyHyhoajFQ"}
+            paper(context)
+
+
+            context = {title:"Experimental results: Reinforcement Learning of POMDPs using Spectral Methods",
+	                       authors:"Kamyar Azizzadenesheli, Alessandro Lazaric, Animashree Anandkumar",
+	                       conf: "Appeared at NIPS 2016, Barcelona, Spain, Workshop on Deep RL",
+	                       paper:"https://arxiv.org/abs/1705.02553",
+	poster:"posters/poster_POMneurips2016.pdf",
+	demo:"demos/SMvsDQN.flv"}
+            paper(context)
+
+            context = {title:"Open Problem: Approximate Planning of POMDPs in the class of Memoryless Policies",
+	                       authors:"Kamyar Azizzadenesheli, Alessandro Lazaric, Animashree Anandkumar",
+				conf: "Appeared at COLT 2016, New York, USA",
+				paper: "http://proceedings.mlr.press/v49/azizzadenesheli16b.html",
+				talk: "https://www.youtube.com/watch?v=-GmdjGt5nBg"}
+            paper(context)
+
+            context = {title:"Reinforcement Learning of POMDPs using Spectral Methods",
+	                       authors:"Kamyar Azizzadenesheli, Alessandro Lazaric, Animashree Anandkumar",
+	                       conf: "Appeared at COLT 2016, New York, USA",
+	                       paper:"http://proceedings.mlr.press/v49/azizzadenesheli16a.html",
+			talk:"https://www.youtube.com/watch?v=w7QCLFR8hJU",
+			demo:"demos/SMvsDQN.flv"}
+            paper(context)
+
+            </script> 
+	<script>
+		var $rows  = $('#myPublications li');
+$('#search').keyup(function() {
+	var val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();
+	$rows.show().filter(function() {
+        var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
+	     return text.indexOf(val) == -1;
+	       }).hide();
+	       });
+	       </script>
+	</body>
+</html>

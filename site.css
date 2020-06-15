@@ -1,0 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One|Hind+Guntur|Palanquin');
+p, ul, ol { font-family: 'Hind Guntur', sans-serif; }
+h1, h2, h3, h4, h5, h6 { font-family: 'Julius Sans One', sans-serif; }
+.professorship { font-family: 'Palanquin', sans-serif; }
+

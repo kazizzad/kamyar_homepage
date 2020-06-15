@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Fall CS59000 RL 2020</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="site.css">
+  </head>
+  <body>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Fall 2020 CS59000 Reinforcement Learning</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <!-- <a class="nav-item nav-link" href="#bio">Bio</a> -->
+          <a class="nav-item nav-link" href="#course">Course Description</a>
+          <a class="nav-item nav-link" href="#details">Course Details</a>
+<!--          <a class="nav-item nav-link" href="#assignments">Assignments</a>-->
+          <a class="nav-item nav-link" href="#topics">Topics</a>
+<!--          <a class="nav-item nav-link" href="#lectures">Lectures</a> -->
+          <a class="nav-item nav-link" href="https://www.cs.purdue.edu/homes/kamyar/">Kamyar's Homepage</a>
+        </div>
+      </div>
+    </nav>
+
+        </div>
+
+        <div class="col-lg-8">
+          <h3 id="course">Course Description</h3>
+          <p align="justify">                      
+Reinforcement Learning (RL) is the study of sequential decision making under uncertainty with applications abounding a vast range of real-world problems, from advertisements and recommendations systems to robotics and autonomous vehicles.
+
+In this course, we learn how to approach RL problems from both theoretical and empirical points of view. We study how RL agents interact with their surrounding environments and learn how to improve their behavior over time. After this course, we will be confortable understanding how companies like Amazon, Yelp, Netflix, Adobe, and Google provide their recommendation services, and how companies like DeepMind can master video games such as Atari games and StarCraft.
+
+The course assumes students are comfortable with analysis, probability, statistics, and basic programming. This course will cover core concepts in learning theory.
+
+
+          </p>
+
+          <h3 id="details">Course Details</h3>
+          <ul>
+            <li>Lectures on M/W at 4:30pm-5:45pm in Lawson rm 1106
+            <!-- <li>Recitations Tuesday at 5pm-6:30pm in -->
+            <li>Office hours, one hour right after class, M/W at 5:45pm-6:45pm
+            <!-- <li>We will be using Piazza for discussion forums and announcements <a href="https://piazza.com/caltech/winter2020/cscnseeids165">[link]</a></li> -->
+          </ul>
+
+
+            <h4>Grading</h4>
+            <ul>
+              <li> Homework Assignments 60%
+              <li> Take Home Final 20%
+              <li> Project 20%
+              <!-- <li> Quizzes 30% (2 in-class quiz)-->
+              <p align="justify"> No late submission would be accepted. </p>
+            </ul>
+
+
+            <!--<p>Project Grade Decomposition
+              <ul>
+                <li>Proposal Report: 20%
+                <li>Proposal Presentation: 10%
+                <li>Final Report: 50%
+                <li>Final Presentation: 20%
+              </ul>
+            Project Details and Guidelines <a href="teaching/Project_Guidelines.pdf">pdf</a> </p>-->
+
+
+            <h4>Collaboration Policy</h4>
+	    <p align="justify"> I encourage the students to discuss and exchange ideas for the problem sets and the project, but the students shall accomplish each of their problem sets and project separately. Make sure you do not violate the Honor Code. If you are discussing with other students but cannot be informative enough without consulting your solution, please do not pursue the discussion. Instead, refer your colleagues and classmates to a teaching assistant. </p>
+            <!--<p align="justify"><b>Projects</b>:  Students are allowed to collaborate fully within their project teams, but no collaboration is allowed between teams.-->
+
+            <!--<h4>Teaching Assistants</h4>
+            <p class="indented">
+            <table class="indented">
+              <tr><td>Sahin Lale&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td> alale@caltech.edu </td></tr>
+              <tr><td>Yujia Huang </td><td> yhu4ng@caltech.edu </td></tr>
+              <tr><td>Guanya Shi </td><td> gshi@caltech.edu </td></tr>
+              <tr><td>Sophie Dai </td><td> sdai@caltech.edu </td></tr>
+            </table>
+            </p>-->
+
+
+          <!-- <h3 id="assignments">Assignments</h3>
+            <ul>
+              <li><a href="teaching/Assignment_1.pdf">Assignment 1</a>
+              <li><a href="teaching/Assignment_2.pdf">Assignment 2</a>
+               <li><a href="teaching/Assignment_3.pdf">Assignment 3</a> 
+            </ul>-->
+            
+          <h3 id="topics">Topics</h3>
+          <ul>
+            <li><b>Probablity Theory</b>, including basic cocenpts and concentration inequalities
+            <li><b>Bandits</b>, including bandit algorithms in Multi-Armed Bandits, and other variants
+            <li><b>Markov Decision Processes (MDP)</b>, including basic concepts of optimization and dynamic programming
+            <li><b>RL algorithms in MDPs</b>, including value based methods and policy based methods
+            <li><b>Control Theory</b>, including linear dynamical systems
+            <li><b>Deep Reinforcment Learning</b>, including deep Q-Networks, and policy gradient methods
+          </ul>
+
+          <h3 id="sources">Extra Resources</h3>
+          <ul>
+            <li><b>Book:</b> <i>Probability with Martingales </i> by David Williams
+            <li><b>Book:</b> <i>Bandit Algorithms </i> by Tor Lattimore and Csaba Szepesvari
+	    <li><b>Book:</b> <i>Markov Decision Processes: Discrete Stochastic Dynamic Programming</i> by Martin Puterman 
+	    <li><b>Book:</b> <i>Reinforcement Learning: An Introduction</i> by Richard S. Sutton and Andrew G. Barto
+	    <li><b>Book:</b> <i>Algorithms for Reinforcement Learning</i> by Csaba Szepesvárii
+	    <li><b>Book:</b> <i>Reinforcement Learning: Theory and Algorithms</i> by Alekh Agarwal Nan Jiang Sham M. Kakade
+	    <li><b>Book:</b> <i>Dynamic Programming and Optimal Control</i> by Dimitri Bertsekas
+ 	    <li><i><a href="https://www.davidsilver.uk/teaching/">[Course on RL]</a></i> by David Silver 
+	    <li><i><a href="https://edge.edx.org/courses/BerkeleyX/CS188x-SP15/SP15/20021a0a32d14a31b087db8d4bb582fd/">[Introduction to Artificial Intelligence]</a></i> by Pieter Abbeel
+	    <li><i><a href="http://rail.eecs.berkeley.edu/deeprlcourse/">[DeepRL]</a></i> by Sergey Levine
+	    <li><i><a href="http://pierrelucbacon.com/teaching/">[Course on RL]</a></i> by Pierre-Luc Bacon
+	    <li><i><a href="https://nanjiang.cs.illinois.edu/cs498/">[Course on RL]</a>,<a href="https://nanjiang.cs.illinois.edu/cs598/">[Course on RL]</a></i> by Nan Jiang
+           </ul>
+
+          <!--<h3 id="schedule">Schedule</h3>
+          <p class="indented">
+          <table class="indented">
+            <tr> <td>Lecture 1:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td> Introduction, Probability </td> </tr>
+            <tr> <td>Lecture 2:</td><td> Model, sufficient statistics, Setup for Neyman Pearson, Bayesian, Minmax </td> </tr>
+            <tr> <td>Lecture 3:</td><td> Solving for NP, Bayesian </td> </tr>
+            <tr> <td>Lecture 4:</td><td> Sequential detection </td> </tr>
+            <tr> <td>Lecture 5:</td><td> Estimation, UMVU, different loss functions </td> </tr>
+            <tr> <td>Lecture 6:</td><td> Cramer Rao and ML </td> </tr>
+            <tr> <td>Lecture 7:</td><td> Stein’s method </td> </tr>
+            <tr> <td>Lecture 8:</td><td> <b>First Quiz-Jan 30 (In class)</b> </td> </tr>
+            <tr> <td>Lecture 9:</td><td> Spectral Methods: PCA/CCA </td> </tr>
+            <tr> <td>Lecture 10:</td><td> Spectral Methods: HMM </td> </tr>
+            <tr> <td>Lecture 11:</td><td> Spectral Methods: Tensor methods </td> </tr>
+            <tr> <td>Lecture 12:</td><td> Spectral Methods: Method of moments</td> </tr>
+            <tr> <td>Lecture 13:</td><td> Optimization: Non-convex analysis </td> </tr>
+            <tr> <td>Lecture 14:</td><td> Optimization: Competitive problems </td> </tr>
+            <tr> <td>Lecture 15:</td><td> <b>Second Quiz-Feb 25 (In class)</b> </td> </tr>
+            <tr> <td>Lecture 16:</td><td> Representation theory: Neural Networks. Approximation results </td> </tr>
+            <tr> <td>Lecture 17:</td><td> Representation theory: Neural Networks. Approximation results </td> </tr>
+            <tr> <td>Lecture 18:</td><td> Generalization theory: VC and Radamacher bounds </td> </tr>
+            <tr> <td>Lecture 19:</td><td> Generalization theory: VC and Radamacher bounds </td> </tr>
+            <tr> <td>Lecture 20:</td><td> Recap </td> </tr>
+
+            <tr> <td> <b>Final Presentation Day: </b></td><td>  <b> March 13 9am-1pm ANB 105 </b> </td> </tr>
+          </table>
+          </p>-->
+
+
+          <!--<h3 id="lectures">Lectures</h3>
+          <p align="justify"> Lecture videos can be found in this <a href="https://www.youtube.com/playlist?list=PLVNifWxslHCDlbyitaLLYBOAEPbmF1AHg">YouTube playlist</a></li> </p>
+          <ul>
+            <li> <a href="teaching_2020/2020_lec1.pptx">Lecture 1 Notes</a>
+            <li> <a href="teaching_2020/2020_lec2.pdf">Lecture 2 Notes</a>
+            <li> <a href="teaching_2020/2020_lec3.pdf">Lecture 3 Notes</a>
+            <li> <a href="teaching_2020/2020_lec4.pdf">Lecture 4 Notes</a>
+            <li> <a href="teaching_2020/2020_lec5.pdf">Lecture 5 Notes</a>
+            <li> <a href="teaching_2020/2020_lec6.pdf">Lecture 6 Notes</a>
+            <li> <a href="teaching_2020/2020_lec7.pdf">Lecture 7 Notes</a>-->
+
+            <!-- <li><p align="justify">Lecture 1 covered logistics, basic probability and statistics background <a href="teaching/lecture1.pptx">Lecture 1 Slides</a>. <br /> For details <a href="teaching/introduction-to-probability.pdf">Intro. Probability</a>, <a href="teaching/introduction-to-statistics.pdf">Intro. Statistics</a> </p>
+            <li> <a href="teaching/lecture2.pptx">Lecture 2 Slides</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="teaching/CS165_Lecture_2_scribe.pdf">Lecture 2 Notes</a>
+            <li> <a href="teaching/lecture3.pptx">Lecture 3 Slides</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="teaching/CS165_Lecture_3_scribe.pdf">Lecture 3 Notes</a>
+            <li> <a href="teaching/lecture4.pptx">Lecture 4 Slides</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="teaching/CS165_Lecture_4_scribe.pdf">Lecture 4 Notes</a>
+            <li> <a href="teaching/lecture5.pptx">Lecture 5 Slides</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="teaching/CS165_Lecture_5_scribe.pdf">Lecture 5 Notes</a> -->
+            <!-- <li> <a href="teaching/lecture6.pptx">Lecture 6 Slides</a>  -->
+            <!-- <li> <a href="teaching/lecture7.pdf">Lecture 7 Slides</a>  -->
+            <!-- <li> <a href="teaching/lecture8.pptx">Lecture 8 Slides</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="teaching/CS165_Lecture_8_scribe.pdf">Lecture 8 Notes</a> -->
+            <!-- <li> <a href="teaching/lecture11.pptx">Lecture 11 Slides</a>  -->
+          </ul>
+
+
+
+        </div>
+          <!--div class="col-lg-6 offset-lg-3">
+          <a class="twitter-timeline" data-height="400" href="https://twitter.com/AnimaAnandkumar">Tweets by AnimaAnandkumar</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div> -->
+      </div>
+    </div>
+  </body>
+</html>
+
+
