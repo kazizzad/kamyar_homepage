@@ -32,7 +32,7 @@
           <p><input type="text" id="search" placeholder="Type to search" autocomplete="on" autofocus class="form-control"></p>
           <ul id="myPublications" class='list-group'>
 
-            <font size="+3"><li class="list-group-item">2020</li></font>
+		  <!--<font size="+3"><li class="list-group-item">2020</li></font>-->
  <script>
   function paper(context) {
    var newElem = document.createElement("li");
@@ -55,6 +55,18 @@
               var container = document.getElementById("myPublications");container.appendChild(newElem);}
 
 //             context = {title,authors,conf,paper,code,poster,slides,talk,blog,page,demo} 
+
+ context = {title:"Competitive Policy Optimization",
+                               authors:"Manish Prajapat, Kamyar Azizzadenesheli, Alexander Liniger, Yisong Yue, Anima Anandkumar, 2020",
+                               paper:"https://arxiv.org/abs/2006.10611",
+ 			       page:"https://sites.google.com/view/rl-copo"}
+            paper(context)
+
+ context = {title:"Multipole Graph Neural Operator for Parametric Partial Differential Equations",
+                               authors:"Zongyi Li, Nikola Kovachki, Kamyar Azizzadenesheli, Burigede Liu, Kaushik Bhattacharya, Andrew Stuart, Anima Anandkumar, 2020",
+                               paper:"https://arxiv.org/abs/2006.09535"}
+            paper(context)
+
 
  context = {title:"Policy Gradient in Partially Observable Environments: Approximation and Convergence",
                                authors:"Kamyar Azizzadenesheli, Yisong Yue, Animashree Anandkumar, 2020",
