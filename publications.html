@@ -21,7 +21,9 @@
         <div class="navbar-nav">
           <a class="nav-item nav-link" href="publications.html">Publications</a>
    <a class="nav-item nav-link" href="teaching.html">Teaching</a>
-          <a class="nav-item nav-link" href="news.html">News</a>
+   <a class="nav-item nav-link" href="group.html">Group</a>
+             <a class="nav-item nav-link" href="ml_seminar.html">ML-Seminar</a>
+	  <a class="nav-item nav-link" href="bio.html">Bio</a>
         </div>
       </div>
     </nav>
@@ -50,35 +52,97 @@
    if (context.blog){slack_var = slack_var + '&nbsp;&nbsp;<a href='+context.blog+' style="text-decoration:none">[Blog Post]</a>'}
    if (context.page){slack_var = slack_var + '&nbsp;&nbsp;<a href='+context.page+' style="text-decoration:none">[Project Page]</a>'}
    if (context.demo){slack_var = slack_var + '&nbsp;&nbsp;<a href='+context.demo+' style="text-decoration:none">[Demo]</a>'}
+   if (context.colab){slack_var = slack_var + '&nbsp;&nbsp;<a href='+context.colab+' style="text-decoration:none">[Colab]</a>'}
    if (context.supp){slack_var = slack_var + '&nbsp;&nbsp;<a href='+context.supp+' style="text-decoration:none">[Supp]</a>'}
               newElem.innerHTML = newElem.innerHTML + '<div class = "download">' + slack_var + '</div>'  
               var container = document.getElementById("myPublications");container.appendChild(newElem);}
 
-//             context = {title,authors,conf,paper,code,poster,slides,talk,blog,page,demo} 
+//             context = {title,authors,conf,paper,code,poster,slides,talk,blog,page,colab,demo} 
+
+
+
+context = {title: "On the Convergence and Optimality of Policy Gradient for Coherent Risk",
+                               authors:"Audrey Huang, Liu Leqi, Zachary C. Lipton, Kamyar Azizzadenesheli, 2021",
+                                paper:"https://arxiv.org/abs/2103.02827"}
+            paper(context)
+
+context = {title: "Multi-Agent Multi-Armed Bandits with Limited Communication",
+                               authors:"Mridul Agarwal, Vaneet Aggarwal, Kamyar Azizzadenesheli, 2021",
+                                paper:"https://arxiv.org/pdf/2102.08462.pdf"}
+            paper(context)
+
+
+ context = {title:"Physics-informed machine learning: case studies for weather and climate modelling",
+                               authors:"K. Kashinath, M. Mustafa, A. Albert, J-L. Wu, C. Jiang, S. Esmaeilzadeh, Kamyar. Azizzadenesheli, R. Wang, A. Chattopadhyay, A. Singh, A. Manepalli, D. Chirila, R. Yu, R. Walters, B. White, H. Xiao, H. A. Tchelepi, P. Marcus, A. Anandkumar, P. Hassanzadeh and Prabhat",
+                               paper:"https://royalsocietypublishing.org/doi/10.1098/rsta.2020.0093",
+                        conf:"Appeared at The Royal Society, 2021"}
+            paper(context)
+
+ context = {title:"A learning-based multiscale method and its application to inelastic impact problems",
+                               authors:"Burigede Liu, Nikola Kovachki, Zongyi Li, Kamyar Azizzadenesheli, Anima Anandkumar, Andrew Stuart, Kaushik Bhattacharya, 2021",
+	                        paper:"https://arxiv.org/pdf/2102.07256.pdf"}
+            paper(context)
+
+
+ context = {title:"HypoSVI: Hypocenter inversion with Stein variational inference and Physics Informed Neural Networks",
+                               authors:"Jonathan D. Smith, Zachary E. Ross, K. Azizzadenesheli, Jack B. Muir, 2021",
+                               paper:"https://arxiv.org/pdf/2101.03271.pdf"}
+            paper(context)
+
+
+ context = {title:"Importance Weight Estimation and Generalization in Domain Adaptation under Label Shift",
+                               authors:"Kamyar Azizzadenesheli, 2020",
+                               paper:"https://arxiv.org/abs/2011.14251"}
+            paper(context)
+
+ context = {title:"Fourier Neural Operator for Parametric Partial Differential Equations",
+                               authors:"Zongyi Li, Nikola Kovachki, Kamyar Azizzadenesheli, Burigede Liu, Kaushik Bhattacharya, Andrew Stuart, Anima Anandkumar",
+                               paper:"https://arxiv.org/abs/2010.08895",
+ 				blog:"https://zongyi-li.github.io/blog/2020/fourier-pde/",
+	 		conf:"Appeared at International Conference on Learning Representations (ICLR) 2021",
+				code:"https://github.com/zongyi-li/fourier_neural_operator"}
+            paper(context)
+
+        context = {title:"Explore More and Improve Regret in Linear Quadratic Regulators",
+                        authors:"Sahin Lale, Kamyar Azizzadenesheli, Babak Hassibi, Anima Anandkumar, 2020",
+	                paper:"https://arxiv.org/abs/2007.12291"}
+            paper(context)
+
+
+ context = {title:"Deep Bayesian Quadrature Policy Optimization",
+                               authors:"Akella Ravi Tej, Kamyar Azizzadenesheli, Mohammad Ghavamzadeh, Yisong Yue, Anima Anandkumar, 2020",
+                               paper:"https://arxiv.org/pdf/2006.15637.pdf",
+	 			conf:"Appeared at AAAI Conference on Artificial Intelligence 2021 (AAAI-21)",
+                               code:"https://github.com/Akella17/Deep-Bayesian-Quadrature-Policy-Optimization"}
+            paper(context)
 
  context = {title:"Competitive Policy Optimization",
                                authors:"Manish Prajapat, Kamyar Azizzadenesheli, Alexander Liniger, Yisong Yue, Anima Anandkumar, 2020",
                                paper:"https://arxiv.org/abs/2006.10611",
- 			       page:"https://sites.google.com/view/rl-copo"}
+ 			       page:"https://sites.google.com/view/rl-copo",
+ 				code:"https://github.com/manish-pra/copg",
+ 				package:"https://github.com/manish-pra/trcopo",
+ 				blog:"https://sites.google.com/view/you-rl-copo"}
             paper(context)
 
  context = {title:"Multipole Graph Neural Operator for Parametric Partial Differential Equations",
-                               authors:"Zongyi Li, Nikola Kovachki, Kamyar Azizzadenesheli, Burigede Liu, Kaushik Bhattacharya, Andrew Stuart, Anima Anandkumar, 2020",
+                               authors:"Zongyi Li, Nikola Kovachki, Kamyar Azizzadenesheli, Burigede Liu, Kaushik Bhattacharya, Andrew Stuart, Anima Anandkumar",
+	 			conf:"Appeared at Neural Information Processing Systems (Neurips) 2020",
+	 			code:"https://github.com/zongyi-li/graph-pde",
                                paper:"https://arxiv.org/abs/2006.09535"}
             paper(context)
 
 
  context = {title:"Policy Gradient in Partially Observable Environments: Approximation and Convergence",
                                authors:"Kamyar Azizzadenesheli, Yisong Yue, Animashree Anandkumar, 2020",
-                               paper:"https://arxiv.org/pdf/1810.07900.pdf"}
+                               paper:"https://arxiv.org/abs/1810.07900"}
             paper(context)
 
 
 
-
-
         context = {title:"MeshfreeFlowNet: A Physics-Constrained Deep Continuous Space-Time Super-Resolution Framework",
-                        authors:"Chiyu (Max) Jiang, Soheil Esmaeilzadeh, Kamyar Azizzadenesheli, Karthik Kashinath, Mustafa Mustafa, Hamdi A. Tchelepi, Philip Marcus, Prabhat, Anima Anandkumar, 2020",
+                        authors:"Chiyu (Max) Jiang, Soheil Esmaeilzadeh, Kamyar Azizzadenesheli, Karthik Kashinath, Mustafa Mustafa, Hamdi A. Tchelepi, Philip Marcus, Prabhat, Anima Anandkumar",
+			conf:"Appeared at SC20, The International Conference for High Performance Computing, Networking, Storage, and Analysis",
                         paper:"https://arxiv.org/pdf/2005.01463.pdf",
    page:"http://www.maxjiang.ml/proj/meshfreeflownet",
    talk:"https://youtu.be/mjqwPch9gDo",
@@ -89,15 +153,20 @@
 
         context = {title:"EikoNet: Solving the Eikonal equation with Deep Neural Networks",
                         authors:"Jonathan D. Smith, Kamyar Azizzadenesheli, Zachary E. Ross, 2020",
+			conf:"Appeared IEEE Transactions on Geoscience and Remote Sensing",
+			code:"https://github.com/Ulvetanna/EikoNet",
+			colab:"https://colab.research.google.com/drive/1Hlz2bJQ1bwIVkFtWnBmZIaLR-kbCk_TQ?usp=sharing",
                         paper:"https://arxiv.org/abs/2004.00361"}
             paper(context)
 
         context = {title:"Logarithmic Regret Bound in Partially Observable Linear Dynamical Systems",
-                        authors:"Sahin Lale, Kamyar Azizzadenesheli, Babak Hassibi, Anima Anandkumar, 2020",
-                        paper:"https://arxiv.org/pdf/2003.11227.pdf"}
+                        authors:"Sahin Lale, Kamyar Azizzadenesheli, Babak Hassibi, Anima Anandkumar",	
+	conf:"Appeared at Neural Information Processing Systems (Neurips) 2020",
+                        paper:"https://arxiv.org/pdf/2003.11227.pdf",
+			talk:"https://www.youtube.com/watch?v=jpeAmK0Ahd0&feature=youtu.be"}
             paper(context)
 
-        context = {title:"Regret Bound of Adaptive Control in Linear Quadratic Gaussian (LQG) Systems",
+        context = {title:"Adaptive Control and Regret Minimization in Linear Quadratic Gaussian (LQG) Setting",
                         authors:"Sahin Lale, Kamyar Azizzadenesheli, Babak Hassibi, Anima Anandkumar, 2020",
                         paper:"https://arxiv.org/pdf/2003.05999.pdf"}
             paper(context)
@@ -105,7 +174,9 @@
         context = {title:"Neural Operator: Graph Kernel Network for Partial Differential Equations",
                         authors:"Zongyi Li, Nikola Kovachki, Kamyar Azizzadenesheli, Burigede Liu, Kaushik Bhattacharya, Andrew Stuart, Anima Anandkumar",
                         paper:"https://arxiv.org/pdf/2003.03485.pdf",
-   conf:"Appeared at International Conference on Learning Representations (ICLR) 2020 Workshop."}
+			conf:"Appeared at International Conference on Learning Representations (ICLR) 2020 Workshop",
+			code:"https://github.com/zongyi-li/graph-pde",
+			blog:"https://zongyi-li.github.io/blog/2020/graph-pde/"}
             paper(context)
 
         context = {title:"Regret Minimization in Partially Observable Linear Quadratic Control",
