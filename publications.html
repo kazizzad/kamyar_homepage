@@ -21,7 +21,7 @@
         <div class="navbar-nav">
           <a class="nav-item nav-link" href="publications.html">Publications</a>
    <a class="nav-item nav-link" href="teaching.html">Teaching</a>
-   <a class="nav-item nav-link" href="group.html">Group</a>
+   <a class="nav-item nav-link" href="people.html">People</a>
              <a class="nav-item nav-link" href="ml_seminar.html">ML-Seminar</a>
 	  <a class="nav-item nav-link" href="bio.html">Bio</a>
         </div>
@@ -53,13 +53,175 @@
    if (context.page){slack_var = slack_var + '&nbsp;&nbsp;<a href='+context.page+' style="text-decoration:none">[Project Page]</a>'}
    if (context.demo){slack_var = slack_var + '&nbsp;&nbsp;<a href='+context.demo+' style="text-decoration:none">[Demo]</a>'}
    if (context.colab){slack_var = slack_var + '&nbsp;&nbsp;<a href='+context.colab+' style="text-decoration:none">[Colab]</a>'}
+  if (context.media){slack_var = slack_var + '&nbsp;&nbsp;<a href='+context.media+' style="text-decoration:none">[Media]</a>'}
    if (context.supp){slack_var = slack_var + '&nbsp;&nbsp;<a href='+context.supp+' style="text-decoration:none">[Supp]</a>'}
               newElem.innerHTML = newElem.innerHTML + '<div class = "download">' + slack_var + '</div>'  
               var container = document.getElementById("myPublications");container.appendChild(newElem);}
 
-//             context = {title,authors,conf,paper,code,poster,slides,talk,blog,page,colab,demo} 
+//             context = {title,authors,media,conf,paper,code,poster,slides,talk,blog,page,colab,demo}
+
+context = {title: "Thompson Sampling Achieves O(√T) Regret in Linear Quadratic Control",
+authors:"Taylan Kargin, Sahin Lale, Kamyar Azizzadenesheli, Anima Anandkumar, Babak Hassibi",
+conf:"Appeared at Conference on Learning Theory (COLT) 2022",       
+paper:"https://arxiv.org/pdf/2206.08520.pdf"}
+paper(context)
 
 
+context = {title: "Langevin Monte Carlo for Contextual Bandits",
+authors:"Pan Xu, Hongkai Zheng, Eric Mazumdar, Kamyar Azizzadenesheli, Anima Anandkumar",
+conf:"Appeared at International Conference on Machine Learning (ICML) 2022",
+paper:"https://arxiv.org/pdf/2206.11254.pdf"}
+paper(context)
+
+context = {title: "Supervised Learning with General Risk Functionals",
+authors:"Liu Leqi, Audrey Huang, Zachary C. Lipton, Kamyar Azizzadenesheli",
+conf:"Appeared at International Conference on Machine Learning (ICML) 2022"}       
+// paper:"https://arxiv.org/pdf/2206.08520.pdf"}
+paper(context)
+
+context = {title: "RiskyZoo: A Library for Risk-Sensitive Supervised Learning",
+authors:"William Wong, Liu Leqi, Audrey Huang, Kamyar Azizzadenesheli, Zachary C. Lipton",
+conf:"Appeared at Responsible Decision Making in Dynamic Environments Decision Workshop, ICML 2022"}       
+// paper:"https://arxiv.org/pdf/2206.08520.pdf"}
+paper(context)
+
+context = {title: "KCRL: Krasovskii-Constrained Reinforcement Learning with Guaranteed Stability in Nonlinear Dynamical Systems",
+authors:"Sahin Lale, Yuanyuan Shi, Guannan Qu, Kamyar Azizzadenesheli, Adam Wierman, Anima Anandkumar",
+// conf:"Appeared at Responsible Decision Making in Dynamic Environments Decision Workshop, ICML 2022",       
+paper:"https://arxiv.org/pdf/2206.01704.pdf"}
+paper(context)
+
+
+context = {title: "Functional Linear Regression of CDFs",
+authors:"Qian Zhang, Anuran Makur, Kamyar Azizzadenesheli",
+// conf:"Appeared at Advances in Water Resources, Elsevier, 2022",       
+paper:"https://arxiv.org/pdf/2205.14545.pdf"}
+paper(context)
+
+
+context = {title: "Competitive Gradient Optimization",
+authors:"Abhijeet Vyas, Kamyar Azizzadenesheli",
+// conf:"Appeared at Advances in Water Resources, Elsevier, 2022",
+code:"https://github.com/AbhijeetiitmVyas/CompetitiveGradientOptim",
+paper:"https://arxiv.org/pdf/2205.14232.pdf"}
+paper(context)
+
+
+context = {title: "Generative Adversarial Neural Operators",
+authors:"Md Ashiqur Rahman, Manuel A. Florez, Anima Anandkumar, Zachary E. Ross, Kamyar Azizzadenesheli",
+// conf:"Appeared at Advances in Water Resources, Elsevier, 2022",
+code:"https://github.com/kazizzad/GANO",       
+paper:"https://arxiv.org/abs/2205.03017.pdf"}
+paper(context)
+
+
+context = {title: "Neural-Fly enables rapid learning for agile flight in strong winds",
+authors:"Michael O’Connell, Guanya Shi, Xichen Shi, Kamyar Azizzadenesheli, Anima Anandkumar, Yisong Yue, Soon-Jo Chung",
+conf:"Appeared at Science Robotics, 2022",       
+media:"https://www.caltech.edu/about/news/rapid-adaptation-of-deep-learning-teaches-drones-to-survive-any-weather",
+demo:"https://www.youtube.com/watch?v=TuF9teCZX0U&feature=youtu.be",
+paper:"https://www.science.org/doi/10.1126/scirobotics.abm6597",
+code:"https://github.com/aerorobotics/neural-fly"}
+paper(context)
+
+context = {title: "U-NO: U-shaped Neural Operators",
+authors:"Md Ashiqur Rahman, Zachary E. Ross, Kamyar Azizzadenesheli",
+// conf:"Appeared at Advances in Water Resources, Elsevier, 2022", 
+code:"https://github.com/ashiq24/UNO",
+colab:"https://colab.research.google.com/drive/1f1WYsjAgIjJRFtfQYYnZCZsxl602MMPX?usp=sharing", 
+paper:"https://arxiv.org/pdf/2204.11127.pdf"}
+paper(context)
+
+
+context = {title: "U-FNO - an enhanced Fourier neural operator based-deep learning model for multiphase flow",
+authors:"Gege Wen, Zongyi Li, Kamyar Azizzadenesheli, Anima Anandkumar, Sally M. Benson",
+conf:"Appeared at Advances in Water Resources, Elsevier, 2022",        
+package:"https://ccsnet.ai",
+blog:"https://developer.nvidia.com/blog/accelerating-climate-change-mitigation-with-machine-learning-the-case-of-carbon-storage/?ncid=so-twit-573482&=&linkId=100000119404270#cid=dl13_so-twit_en-us",
+media:"https://blogs.nvidia.com/blog/2022/04/08/ai-improves-carbon-sequestration/",
+paper:"https://www.sciencedirect.com/science/article/pii/S0309170822000562?utm_campaign=STMJ_AUTH_SERV_PUBLISHED&utm_medium=email&utm_acid=245784017&SIS_ID=&dgcid=STMJ_AUTH_SERV_PUBLISHED&CMX_ID=&utm_in=DM245737&utm_source=AC_"}
+paper(context)
+
+context = {title:"FourCastNet: A Global Data-driven High-resolution Weather Model using Adaptive Fourier Neural Operators",
+authors:"Jaideep Pathak, Shashank Subramanian, Peter Harrington, Sanjeev Raja, Ashesh Chattopadhyay, Morteza Mardani, Thorsten Kurth, David Hall, Zongyi Li, Kamyar Azizzadenesheli, Pedram Hassanzadeh, Karthik Kashinath, Animashree Anandkumar",
+conf:"Appeared in the AI for Earth and Space Science at ICLR 2022",
+media:"https://www.nersc.gov/news-publications/nersc-news/science-news/2021/perlmutter-powered-deep-learning-model-speeds-extreme-weather-predictions/",
+paper:"https://arxiv.org/pdf/2202.11214"}
+paper(context)
+
+context = {title: "Off-Policy Risk Assessment for Markov Decision Processes",
+authors:"Audrey Huang, Liu Leqi, Zachary C. Lipton, Kamyar Azizzadenesheli",
+conf:"Appeared at International Conference on Artificial Intelligence and Statistics (AISTATS) 2022",            
+paper:"https://proceedings.mlr.press/v151/huang22b.html"
+}
+paper(context)
+
+context = {title:"Reinforcement Learning with Fast Stabilization in Linear Dynamical Systems",
+authors:"Sahin Lale, Kamyar Azizzadenesheli, Babak Hassibi, Anima Anandkumar",
+conf:"Appeared at International Conference on Artificial Intelligence and Statistics (AISTATS) 2022",
+paper:"https://arxiv.org/abs/2007.12291"}
+paper(context)
+
+context = {title:"Model Learning Predictive Control in Nonlinear Dynamical Systems",
+authors:"Sahin Lale, Kamyar Azizzadenesheli, Babak Hassibi, Anima Anandkumar",
+conf:"Appeared at 60th IEEE Conference on Decision and Control(CDC) 2021",
+paper:"https://ieeexplore.ieee.org/document/9683670"}
+paper(context)
+
+
+ 
+context = {title: "Physics-Informed Neural Operator for Learning Partial Differential Equations",
+authors:"Zongyi Li, Hongkai Zheng, Nikola Kovachki, David Jin, Haoxuan Chen, Burigede Liu, Kamyar Azizzadenesheli, Anima Anandkumar",
+conf:"Appeared at the Continuous Time Methods Workshop, ICML 2022",
+paper:"https://arxiv.org/pdf/2111.03794.pdf"}
+paper(context)
+
+
+
+context = {title: "Neural Operator: Learning Maps Between Function Spaces",
+authors:"Nikola Kovachki, Zongyi Li, Burigede Liu, Kamyar Azizzadenesheli, Kaushik Bhattacharya, Andrew Stuart, Anima Anandkumar, 2021",
+paper:"https://arxiv.org/pdf/2108.08481.pdf"}
+paper(context)
+
+
+
+context = {title:"Seismic wave propagation and inversion with Neural Operators ",
+authors:"Yan Yang, Angela F. Gao, Jorge C. Castellanos, Zachary E. Ross, Kamyar Azizzadenesheli, Robert W. Clayton",
+paper:"https://arxiv.org/abs/2108.05421",
+conf:"Appeared at The Seismic Record Journal, 2021"}
+paper(context)
+
+
+        context = {title:"Finite-time System Identification and Adaptive Control in Autoregressive Exogenous Systems",
+                        authors:"Sahin Lale, Kamyar Azizzadenesheli, Babak Hassibi, Anima Anandkumar",
+        conf:"Appeared at Annual Conference on Learning for Dynamics and Control (L4DC), 2021",
+	                paper:"https://arxiv.org/pdf/2108.11959.pdf"}
+            paper(context)
+
+
+context = {title: "Markov Neural Operators for Learning Chaotic Systems",
+                               authors:"Zongyi Li, Nikola Kovachki, Kamyar Azizzadenesheli, Burigede Liu, Kaushik Bhattacharya, Andrew Stuart, Anima Anandkumar, 2021",
+                                paper:"https://arxiv.org/abs/2106.06898"}
+            paper(context)
+
+
+
+context = {title: "Meta-Adaptive Nonlinear Control: Theory and Algorithms",
+                               authors:"Guanya Shi, Kamyar Azizzadenesheli, Michael O'Connell, Soon-Jo Chung, Yisong Yue, 2021",
+                                paper:"https://arxiv.org/abs/2106.06098",
+			conf:"Appeared at Neural Information Processing Systems, NeurIPS, 2021"}
+            paper(context)
+
+context = {title: "Joint Stabilization and Regret Minimization through Switching in Systems with Actuator Redundancy",
+                               authors:"Jafar Abbaszadeh Chekan, Kamyar Azizzadenesheli, Cedric Langbort, 2021",
+                                paper:"https://arxiv.org/pdf/2105.14709.pdf"}
+            paper(context)
+
+context = {title: "Off-Policy Risk Assessment in Contextual Bandits",
+                               authors:"Audrey Huang, Liu Leqi, Zachary C. Lipton, Kamyar Azizzadenesheli",
+		conf:"Appeared at Neural Information Processing Systems, NeurIPS, 2021",            
+                    paper:"https://arxiv.org/abs/2104.08977"}
+            paper(context)
 
 context = {title: "On the Convergence and Optimality of Policy Gradient for Coherent Risk",
                                authors:"Audrey Huang, Liu Leqi, Zachary C. Lipton, Kamyar Azizzadenesheli, 2021",
@@ -85,13 +247,15 @@ context = {title: "Multi-Agent Multi-Armed Bandits with Limited Communication",
 
 
  context = {title:"HypoSVI: Hypocenter inversion with Stein variational inference and Physics Informed Neural Networks",
-                               authors:"Jonathan D. Smith, Zachary E. Ross, K. Azizzadenesheli, Jack B. Muir, 2021",
-                               paper:"https://arxiv.org/pdf/2101.03271.pdf"}
+                               authors:"Jonathan D. Smith, Zachary E. Ross, Kamyar Azizzadenesheli, Jack B. Muir",
+       				conf:"Appeared at the Geophysical Journal International, 2021",
+	                        paper:"https://arxiv.org/pdf/2101.03271.pdf"}
             paper(context)
 
 
  context = {title:"Importance Weight Estimation and Generalization in Domain Adaptation under Label Shift",
                                authors:"Kamyar Azizzadenesheli, 2020",
+	 			conf:"Appeared at the IEEE Transactions on Pattern Analysis and Machine Intelligence, 2021",
                                paper:"https://arxiv.org/abs/2011.14251"}
             paper(context)
 
@@ -101,11 +265,6 @@ context = {title: "Multi-Agent Multi-Armed Bandits with Limited Communication",
  				blog:"https://zongyi-li.github.io/blog/2020/fourier-pde/",
 	 		conf:"Appeared at International Conference on Learning Representations (ICLR) 2021",
 				code:"https://github.com/zongyi-li/fourier_neural_operator"}
-            paper(context)
-
-        context = {title:"Explore More and Improve Regret in Linear Quadratic Regulators",
-                        authors:"Sahin Lale, Kamyar Azizzadenesheli, Babak Hassibi, Anima Anandkumar, 2020",
-	                paper:"https://arxiv.org/abs/2007.12291"}
             paper(context)
 
 
@@ -119,6 +278,7 @@ context = {title: "Multi-Agent Multi-Armed Bandits with Limited Communication",
  context = {title:"Competitive Policy Optimization",
                                authors:"Manish Prajapat, Kamyar Azizzadenesheli, Alexander Liniger, Yisong Yue, Anima Anandkumar, 2020",
                                paper:"https://arxiv.org/abs/2006.10611",
+	 			conf:"Appeared at The Conference on Uncertainty in Artificial Intelligence (UAI) 2021",
  			       page:"https://sites.google.com/view/rl-copo",
  				code:"https://github.com/manish-pra/copg",
  				package:"https://github.com/manish-pra/trcopo",
@@ -168,6 +328,7 @@ context = {title: "Multi-Agent Multi-Armed Bandits with Limited Communication",
 
         context = {title:"Adaptive Control and Regret Minimization in Linear Quadratic Gaussian (LQG) Setting",
                         authors:"Sahin Lale, Kamyar Azizzadenesheli, Babak Hassibi, Anima Anandkumar, 2020",
+			conf:"Appeared at American Control Conference (ACC) 2021",
                         paper:"https://arxiv.org/pdf/2003.05999.pdf"}
             paper(context)
 
