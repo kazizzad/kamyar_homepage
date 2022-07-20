@@ -21,9 +21,7 @@
         <div class="navbar-nav">
           <a class="nav-item nav-link" href="publications.html">Publications</a>
    <a class="nav-item nav-link" href="teaching.html">Teaching</a>
-   <a class="nav-item nav-link" href="people.html">People</a>
              <a class="nav-item nav-link" href="ml_seminar.html">ML-Seminar</a>
-	  <a class="nav-item nav-link" href="bio.html">Bio</a>
         </div>
       </div>
     </nav>
@@ -59,6 +57,12 @@
               var container = document.getElementById("myPublications");container.appendChild(newElem);}
 
 //             context = {title,authors,media,conf,paper,code,poster,slides,talk,blog,page,colab,demo}
+
+context = {title: "Compactly Restrictable Metric Policy Optimization Problems",
+authors:"Victor D. Dorobantu, Kamyar Azizzadenesheli, and Yisong Yue",
+// conf:"Appeared at Journal of Machine Learning Research (JMLR), 2022",
+paper:"https://arxiv.org/pdf/2207.05850"}
+            paper(context)
 
 context = {title: "Multi-Agent Multi-Armed Bandits with Limited Communication",
 authors:"Mridul Agarwal, Vaneet Aggarwal, Kamyar Azizzadenesheli",
