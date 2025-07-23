@@ -51,6 +51,7 @@
    if (context.talk){slack_var = slack_var + '&nbsp;&nbsp;<a href='+context.talk+' style="text-decoration:none">[Talk]</a>'}
    if (context.blog){slack_var = slack_var + '&nbsp;&nbsp;<a href='+context.blog+' style="text-decoration:none">[Blog Post]</a>'}
    if (context.page){slack_var = slack_var + '&nbsp;&nbsp;<a href='+context.page+' style="text-decoration:none">[Project Page]</a>'}
+   if (context.book){slack_var = slack_var + '&nbsp;&nbsp;<a href='+context.book+' style="text-decoration:none">[Book]</a>'}	  
    if (context.data){slack_var = slack_var + '&nbsp;&nbsp;<a href='+context.data+' style="text-decoration:none">[Data]</a>'}
    if (context.demo){slack_var = slack_var + '&nbsp;&nbsp;<a href='+context.demo+' style="text-decoration:none">[Demo]</a>'}
    if (context.colab){slack_var = slack_var + '&nbsp;&nbsp;<a href='+context.colab+' style="text-decoration:none">[Colab]</a>'}
@@ -59,8 +60,17 @@
               newElem.innerHTML = newElem.innerHTML + '<div class = "download">' + slack_var + '</div>'  
               var container = document.getElementById("myPublications");container.appendChild(newElem);}
 
-//             context = {title,package,authors,media,conf,paper,code,poster,slides,talk,blog,page,colab,demo,data}
+//             context = {title,package,authors,media,conf,paper,code,poster,slides,talk,blog,page,colab,demo,data,book}
 
+
+	 
+	context = {title: "Artificial Intelligence for Science in Quantum, Atomistic, and Continuum Systems",
+				authors:"Xuan Zhang, Limei Wang, Jacob Helwig, Youzhi Luo, Cong Fu, Yaochen Xie, Meng Liu, Yuchao Lin, Zhao Xu, Keqiang Yan, Keir Adams, Maurice Weiler, Xiner Li, Tianfan Fu, Yucheng Wang, Haiyang Yu, YuQing Xie, Xiang Fu, Alex Strasser, Shenglong Xu, Yi Liu, Yuanqi Du, Alexandra Saxton, Hongyi Ling, Hannah Lawrence, Hannes Stärk, Shurui Gui, Carl Edwards, Nicholas Gao, Adriana Ladera, Tailin Wu, Elyssa F Hofgard, Aria Mansouri Tehrani, Rui Wang, Ameya Daigavane, Montgomery Bohde, Jerry Kurtin, Qian Huang, Tuong Phung, Minkai Xu, Chaitanya K Joshi, Simon V Mathis, Kamyar Azizzadenesheli, Ada Fang, Alán Aspuru-Guzik, Erik Bekkers, Michael Bronstein, Marinka Zitnik, Anima Anandkumar, Stefano Ermon, Pietro Liò, Rose Yu, Stephan Günnemann, Jure Leskovec, Heng Ji, Jimeng Sun, Regina Barzilay, Tommi Jaakkola, Connor W Coley, Xiaoning Qian, Xiaofeng Qian, Tess Smidt, Shuiwang Ji",
+ 				conf:"Published by Foundations and Trends® in Machine Learning, 2025",
+				paper:"https://arxiv.org/abs/2307.08423",
+		   		book:"https://www.nowpublishers.com/article/Details/MAL-115"}
+	paper(context)
+	 
 	context = {title: "Neural Dynamic Modes: Computational Imaging of Dynamical Systems from Sparse Observations",
                                authors:"Ali SaraerToosi, Renbo Tu, Kamyar Azizzadenesheli, Aviad Levis",
 			       // conf:"Appeared at Journal of Machine Learning Research (JMLR), 2025",
@@ -393,11 +403,6 @@
 	paper(context)
 	 
 
-	 context = {title: "Artificial Intelligence for Science in Quantum, Atomistic, and Continuum Systems",
-				authors:"Xuan Zhang, Limei Wang, Jacob Helwig, Youzhi Luo, Cong Fu, Yaochen Xie, Meng Liu, Yuchao Lin, Zhao Xu, Keqiang Yan, Keir Adams, Maurice Weiler, Xiner Li, Tianfan Fu, Yucheng Wang, Haiyang Yu, YuQing Xie, Xiang Fu, Alex Strasser, Shenglong Xu, Yi Liu, Yuanqi Du, Alexandra Saxton, Hongyi Ling, Hannah Lawrence, Hannes Stärk, Shurui Gui, Carl Edwards, Nicholas Gao, Adriana Ladera, Tailin Wu, Elyssa F Hofgard, Aria Mansouri Tehrani, Rui Wang, Ameya Daigavane, Montgomery Bohde, Jerry Kurtin, Qian Huang, Tuong Phung, Minkai Xu, Chaitanya K Joshi, Simon V Mathis, Kamyar Azizzadenesheli, Ada Fang, Alán Aspuru-Guzik, Erik Bekkers, Michael Bronstein, Marinka Zitnik, Anima Anandkumar, Stefano Ermon, Pietro Liò, Rose Yu, Stephan Günnemann, Jure Leskovec, Heng Ji, Jimeng Sun, Regina Barzilay, Tommi Jaakkola, Connor W Coley, Xiaoning Qian, Xiaofeng Qian, Tess Smidt, Shuiwang Ji",
-// 				conf:"Appeared at International Conference on Machine Learning (ICML), 2023",
-				paper:"https://arxiv.org/abs/2307.08423"}
-	paper(context)
 	 
 	 context = {title: "Reward Selection with Noisy Observations",
 				authors:"Kamyar Azizzadenesheli, Trung Dang, Aranyak Mehta, Alexandros Psomas, Qian Zhang",
